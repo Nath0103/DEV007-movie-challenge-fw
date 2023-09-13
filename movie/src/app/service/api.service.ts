@@ -26,9 +26,9 @@ export class ApiService {
   }
 
   // Método para obtener películas populares
-  getPopularMovies(): Observable<any> {
-    const popularMoviesUrl = `${this.urlApiPopularMovies}?api_key=${this.apiKey}`;
-    console.log("getMovies POPULARES")
-    return this.http.get<any>(popularMoviesUrl);
-  }
+  // getPopularMovies(): Observable<any> {
+  //   const popularMoviesUrl = `${this.urlApiPopularMovies}?api_key=${this.apiKey}`;
+  //   console.log("getMovies POPULARES")
+  //   return this.http.get<any>(popularMoviesUrl);
+  // }
 }

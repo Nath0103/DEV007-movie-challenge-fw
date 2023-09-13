@@ -176,4 +176,10 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(468px, 1fr));
     gap: 10px;
+    justify-items: center;
+}
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(468px, 1fr));
+    gap: 10px;
 }
