@@ -1,0 +1,34 @@
+<!-- si la data es null o undefined no renderizara -->
+<section class="wrapper grid">
+  <!-- si existe data va a mostar en pantalla -->
+  <section *ngIf="data" class="grid">
+    <!--*ngFor que recorre los elementos de data.results-->
+    <section *ngFor="let pelicula of data.results">
+      <section class="card">
+        <div class="poster">
+          <img [src]="'https://image.tmdb.org/t/p/w500/' + pelicula.poster_path" alt="Poster de la película">
+        </div>
+        <div class="details">
+          <h1>{{ pelicula.title }}</h1>
+          <h2>{{pelicula.release_date}} • PG • 1hr 38min</h2>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>{{pelicula.vote_average}}/10</span>
+          </div>
+          <div class="tags">
+            <span class="tag">{{pelicula.genre_ids[0]}}</span>
+            <span class="tag">{{pelicula.genre_ids[1]}}</span>
+            <span class="tag">{{pelicula.genre_ids[2]}}</span>
+          </div>
+          <p class="desc">
+            {{pelicula.overview}}
+          </p>
+        </div>
+      </section>
+    </section>
+  </section>
+</section>
